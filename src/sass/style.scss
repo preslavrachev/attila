@@ -617,7 +617,7 @@ img[src$="#full"] {
 
 
 .inner {
-	max-width: 32em;
+	max-width: 36em;
 	margin: 0 auto;
 	padding: 0 2em;
 }
@@ -1174,8 +1174,23 @@ img[src$="#full"] {
 	border-top: 1px solid $color-gray-90;
 	border-bottom: 1px solid $color-gray-90;
 	clear: both;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif; 
 }
+
+html:not(.menu-active) {
+	.post-author {
+	  @media only screen and (min-width: 1280px) {
+		position:absolute; top: 1rem; right: 5%; width: 15%;
+	  }	  
+	}
+
+	.post-author-avatar {
+	  @media only screen and (min-width: 1280px) {
+		float: none;
+	  }	
+	}
+}
+
 .post-author-avatar {
 	position: relative;
 	float: left;
@@ -1206,7 +1221,47 @@ img[src$="#full"] {
   @media only screen and (max-width: 480px) {
     padding-left: 0;
   }
+
+  @media only screen and (min-width: 1280px) {
+	padding-left: 0;
+	padding-top: 1rem;
+  }
 }
+
+.post-author-social {
+	ul {
+		float: left;
+		margin: 10px 0 25px;
+		padding: 0;
+	}
+
+	li {
+		float: left;
+		list-style: none;
+
+		&:before {
+			content: none;
+		}
+	}
+
+	a {
+		display: block;
+		width: 32px;
+		height: 28px;
+		margin: 0 3px 10px;
+		text-align: center;
+		color: #606060;
+		border-radius: 36px;
+		background: #efefef;
+
+		i {
+			position: relative;
+			vertical-align: -5px;
+
+		}
+	}
+}
+
 .post-author-name {
 	margin: 0;
 	padding: 0;

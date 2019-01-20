@@ -58,13 +58,6 @@
 				</aside>
 
 				<div class="clear"></div>
-
-				{{#has author="count:>1"}}
-					<aside class="post-authors">
-						<p class="post-authors-info">{{t "This post was a collaboration between:"}}</p>
-						<p class="post-authors-authors">{{authors separator=", "}}</p>
-					</aside>
-        {{else}}
 					{{#primary_author}}
 						<aside class="post-author">
 							<figure class="post-author-avatar avatar">
@@ -89,12 +82,21 @@
 								{{#if facebook}}
 									<span class="post-author-facebook"><i class="ic ic-facebook"></i> <a target="_blank" href="https://facebook.com/{{facebook}}">Facebook</a></span>
 								{{/if}}
+								<div class="post-author-social">
+									<ul>
+										<li><a href="http://twitter.com/preslavrachev" class="smallsocial twitter" target="_blank"><i class="ic ic-twitter"></i></a></li>
+										<li><a href="http://github.com/preslavrachev" class="smallsocial github" target="_blank"><i class="fab fa-github"></i></a></li>
+										<li><a href="https://plus.google.com/+PreslavRachev" class="smallsocial googleplus" target="_blank"><i
+												 class="fab fa-google-plus"></i></a></li>
+										<li><a href="http://www.linkedin.com/in/preslavrachev" class="smallsocial linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+										<li><a href="https://stackoverflow.com/users/1107412/preslav-rachev" class="smallsocial stackoverflow" target="_blank"><i
+												 class="fab fa-stack-overflow"></i></a></li>
+									</ul>
+								</div>
 							</div>
 							<div class="clear"></div>
 						</aside>
 					{{/primary_author}}
-        {{/has}}
-
 			</section>
 
 
