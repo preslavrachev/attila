@@ -101,8 +101,13 @@
 
 
 			<section class="post-comments">
-				<a id="show-disqus" class="post-comments-activate">{{t "Show Comments"}}</a>
-			    <div id="disqus_thread"></div>
+				<script src="https://utteranc.es/client.js" 
+                        repo="preslavrachev/preslav.me-comments" 
+                        issue-term="pathname" 
+                        theme="github-light"
+                        crossorigin="anonymous" 
+                        async>
+                </script>
 			</section>
 
             {{#if @labs.subscribers}}
