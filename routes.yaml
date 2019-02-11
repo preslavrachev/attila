@@ -5,6 +5,18 @@ collections:
     permalink: /{year}/{month}/{day}/{slug}/
     template:
       - index
+  /posts/:
+    permalink: /posts/{slug}/
+    template:
+      - index 
+    filter: tag:-hash-micropost
+    rss: true
+  /micro/:
+    permalink: /micro/{slug}/
+    template:
+      - index 
+    filter: tag:hash-micropost
+    rss: false
 
 taxonomies:
   tag: /tag/{slug}/

@@ -1,0 +1,7 @@
+[
+    {
+        "from": "/rss/" ,
+        "to":  "/posts/rss/",
+        "permanent": true
+      }
+]
