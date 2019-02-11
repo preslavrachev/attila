@@ -4,7 +4,17 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>{{meta_title}}</title>
+	{{#is "post"}}
+		{{#post}}
+			{{^has tag="#micropost"}}
+				<title>{{title}}</title>
+			{{else}}
+				<title>{{primary_author.name}} | {{date format="DD MMM YYYY"}}: "{{excerpt words="12"}}&hellip;"</title>
+			{{/has}}
+		{{/post}}
+	{{else}}
+		<title>{{meta_title}}</title>
+	{{/is}}
 
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />

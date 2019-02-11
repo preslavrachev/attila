@@ -7,13 +7,23 @@
 <article class="{{post_class}}">
 	<div class="inner">
 		<header class="post-header">
-			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-			<span class="post-meta"><a href="/about-me">{{primary_author.name}}</a> {{tags prefix=(t "on ") separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+			{{^has tag="#micropost"}}
+				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+				<span class="post-meta"><a href="/about-me">{{primary_author.name}}</a> {{tags prefix=(t "on ") separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+			{{else}}
+				<a href="{{url}}"><span class="post-meta" style="font-size: 2rem">{{primary_author.name}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span></a>
+			{{/has}}
 			<div class="clear"></div>
 		</header>
 
 		<section class="post-excerpt">
-			<p>{{excerpt}}&hellip;</p>
+			{{^has tag="#micropost"}}
+				<p>{{excerpt}}&hellip;</p>
+			{{else}}
+				<blockquote>
+					<p>{{content}}</p>
+				</blockquote>
+			{{/has}}
 		</section>
 	</div>
 </article>
