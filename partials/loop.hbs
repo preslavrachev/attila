@@ -11,7 +11,7 @@
 				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 				<span class="post-meta"><a href="/about-me">{{primary_author.name}}</a> {{tags prefix=(t "on ") separator=", "}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
 			{{else}}
-				<a href="{{url}}"><span class="post-meta" style="font-size: 2rem">{{primary_author.name}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span></a>
+				<a href="{{url}}"><span class="post-meta" style="font-size: 2rem"><span style="font-size:120%">🗒</span> {{primary_author.name}} | <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span></a>
 			{{/has}}
 			<div class="clear"></div>
 		</header>
@@ -20,9 +20,7 @@
 			{{^has tag="#micropost"}}
 				<p>{{excerpt}}&hellip;</p>
 			{{else}}
-				<blockquote>
-					<p>{{content}}</p>
-				</blockquote>
+				<p>{{content}}</p>
 			{{/has}}
 		</section>
 	</div>

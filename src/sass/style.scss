@@ -1062,6 +1062,28 @@ img[src$="#full"] {
 .post-excerpt p {
 	margin: 0.5em 0 0;
 }
+
+.tag-hash-micropost .post-excerpt {
+	font-size: 1.2em;
+	padding: 1em;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-weight: 200;
+	color: $color-blue-30;
+	background: $color-gray-98;
+}
+
+.tag-hash-micropost:not(.post-template) .post-meta {
+	margin-bottom: 0px;
+}
+
+.tag-hash-micropost .post-excerpt p {
+	margin-bottom: 1rem;
+}
+
+.tag-hash-micropost .post-excerpt a {
+	font-weight: bold;
+}
  
 .tag-hash-micropost.post-template {
 	.post-content {
