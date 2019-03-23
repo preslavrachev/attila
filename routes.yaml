@@ -1,4 +1,7 @@
 routes:
+  /micro/rss/:
+    template: micro/rss
+    content_type: rss
 
 collections:
   /:
